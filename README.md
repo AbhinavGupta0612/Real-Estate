@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 real-estate-app/
 ├── index.html
 ├── vite.config.js
@@ -21,3 +22,6 @@ real-estate-app/
         ├── Listings.jsx     ← All properties + filters
         ├── PropertyDetail.jsx ← Detail view + inquiry form
         └── Contact.jsx      ← Contact form
+=======
+# Real-Estate
+>>>>>>> 9e5a7d087ec7f26fff7af989c66fa5cc1d879d55
