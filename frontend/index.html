@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ── Charset & Viewport ── -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ── Primary Meta Tags ── -->
+    <title>EstateHub — Find Your Dream Home in India</title>
+    <meta name="title"       content="EstateHub — Find Your Dream Home in India" />
+    <meta name="description" content="Discover premium apartments, villas, plots and commercial spaces across India's top cities. Verified listings, best prices, trusted agents." />
+    <meta name="keywords"    content="real estate, property, apartments, villa, plot, commercial, buy home, India, Mumbai, Delhi, Bangalore" />
+    <meta name="author"      content="EstateHub" />
+    <meta name="robots"      content="index, follow" />
+    <meta name="theme-color" content="#e63946" />
+
+    <!-- ── Open Graph / Facebook ── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://estatehub.in/" />
+    <meta property="og:title"       content="EstateHub — Find Your Dream Home in India" />
+    <meta property="og:description" content="Discover premium apartments, villas, plots and commercial spaces across India's top cities." />
+    <meta property="og:image"       content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" />
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="EstateHub — Find Your Dream Home in India" />
+    <meta name="twitter:description" content="Discover premium apartments, villas, plots and commercial spaces across India's top cities." />
+    <meta name="twitter:image"       content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" />
+
+    <!-- ── Favicon (SVG inline as data URI) ── -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e63946'/><path d='M16 6 L26 14 L26 26 L20 26 L20 19 L12 19 L12 26 L6 26 L6 14 Z' fill='white'/></svg>" />
+    <link rel="apple-touch-icon"     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e63946'/><path d='M16 6 L26 14 L26 26 L20 26 L20 19 L12 19 L12 26 L6 26 L6 14 Z' fill='white'/></svg>" />
+
+    <!-- ── Google Fonts ── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ── Loading Screen Styles ── -->
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #faf8f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+      #app-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .loader-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: loaderFadeIn 0.5s ease forwards;
+      }
+      .loader-icon {
+        width: 44px;
+        height: 44px;
+        background: #e63946;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(230,57,70,0.35);
+      }
+      .loader-icon svg { width: 24px; height: 24px; fill: white; }
+      .loader-brand {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: #1a1a2e;
+      }
+      .loader-brand span { color: #e63946; }
+      .loader-bar {
+        width: 180px;
+        height: 3px;
+        background: #ede8e3;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .loader-bar-fill {
+        height: 100%;
+        width: 0%;
+        background: #e63946;
+        border-radius: 999px;
+        animation: loaderBar 1.2s ease forwards;
+      }
+      .loader-text {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        color: #8888aa;
+        letter-spacing: 0.04em;
+      }
+      @keyframes loaderFadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes loaderBar {
+        0%   { width: 0%; }
+        60%  { width: 75%; }
+        100% { width: 100%; }
+      }
+
+      /* Prevent flash of unstyled content */
+      body { background: #faf8f5; }
+    </style>
+  </head>
+
+  <body>
+    <!-- ── Loading Screen ── -->
+    <div id="app-loader">
+      <div class="loader-logo">
+        <div class="loader-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9" fill="rgba(0,0,0,0.25)"/>
+          </svg>
+        </div>
+        <span class="loader-brand">Estate<span>Hub</span></span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-bar-fill"></div>
+      </div>
+      <p class="loader-text">Finding your dream home...</p>
+    </div>
+
+    <!-- ── React Root ── -->
+    <div id="root"></div>
+
+    <!-- ── App Entry ── -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- ── Hide loader once React mounts ── -->
+    <script>
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var loader = document.getElementById('app-loader');
+          if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(function () { loader.remove(); }, 400);
+          }
+        }, 1200);
+      });
+    </script>
+  </body>
+</html>
