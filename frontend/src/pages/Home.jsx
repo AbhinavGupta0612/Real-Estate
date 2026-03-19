@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="hero-gradient relative min-h-screen flex items-center pt-20">
+      <section className="hero-gradient relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Decorative circles */}
-        <div className="absolute top-20 right-20 w-72 h-72 bg-red-500 opacity-10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 right-0 w-72 h-72 bg-red-500 opacity-10 rounded-full blur-3xl pointer-events-none overflow-hidden" />
         <div className="absolute bottom-20 left-10 w-56 h-56 bg-blue-400 opacity-10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">

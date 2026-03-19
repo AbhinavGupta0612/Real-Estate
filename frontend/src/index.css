@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --red: #e63946;
   --red-dark: #c1121f;
@@ -11,7 +12,8 @@
   --text-light: #8888aa;
 }
 
-* {
+/* ── Global Reset & Overflow Fix ── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -26,6 +30,20 @@ body {
   background-color: var(--cream);
   color: var(--text-dark);
   overflow-x: hidden;
+  width: 100%;
+  min-width: 0;
+  position: relative;
+}
+
+/* Fix images & media on mobile */
+img, video, iframe, embed, object, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix all sections from overflowing */
+section, header, footer, nav, main, div {
+  max-width: 100vw;
 }
 
 /* Scrollbar */
@@ -36,6 +54,8 @@ body {
 /* Hero gradient */
 .hero-gradient {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Card hover lift */
@@ -101,4 +121,28 @@ input:focus, textarea:focus, select:focus {
   font-size: 0.85rem;
   color: var(--text-mid);
   font-weight: 500;
+}
+
+/* ── Mobile specific fixes ── */
+@media (max-width: 768px) {
+  /* Prevent decorative blobs from causing overflow */
+  .hero-gradient > * {
+    max-width: 100%;
+  }
+
+  /* Fix absolute positioned decorative elements */
+  .pointer-events-none {
+    overflow: hidden;
+  }
+
+  /* Ensure all paddings don't cause overflow */
+  .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Fix hero grid on mobile */
+  .hero-gradient .grid {
+    overflow: hidden;
+  }
 }
