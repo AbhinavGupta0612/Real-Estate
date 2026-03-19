@@ -68,8 +68,8 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-red-400 mt-0.5 shrink-0" />
                 <span>
-                  5th Floor, Tech Park Tower,<br />
-                  Sector 62, Noida, Uttar Pradesh - 201309
+                  1st & 2nd Floor, Tower A, Tapasya Corp Heights,<br />
+                  Sector 126, Noida, Uttar Pradesh 201303
                 </span>
               </li>
               <li className="flex items-center gap-3">
